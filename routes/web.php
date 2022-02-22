@@ -27,3 +27,8 @@ Route::view('/about', 'about', ['name' => 'Ahmad Farrel Sirajudin Zaidan', 'nim'
 Route::get('/article/{id}', function ($id) {
     return 'This is article with ID: ' .$id; 
 });
+
+//prac2
+Route::get('/index', [HomeController::class,'index']);
+Route::get('/about', [AboutController::class,'about']);
+Route::get('/articles/{id}', [ArticleController::class,'articles']);
