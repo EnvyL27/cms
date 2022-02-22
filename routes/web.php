@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +18,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::view('/about', 'about', ['name' => 'Ahmad Farrel Sirajudin Zaidan', 'nim' => '2041720238','class' => 'TI-2I']);
+
+
+Route::get('/article/{id}', function ($id) {
+    return 'This is article with ID: ' .$id; 
 });
