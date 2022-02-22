@@ -21,9 +21,14 @@
         </style>
     </head>
     <body class="antialiased">
+        
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    <center><h1><a href="  https://www.educastudio.com/about-us">About us</a></h1></center>                  
+                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                    <center><h1>Our Program</h1></center>
+                    <br>
+                    <center><h2><a href="https://www.educastudio.com/program/karir">Educa Karir</a></h2>
+                    <h2><a href="https://www.educastudio.com/program/magang">Educa Magang</a></h2>
+                    <h2><a href="https://www.educastudio.com/program/kunjungan-industr">Educa Kunjungan Industri</a></h2></center>
                     </div>
                 </div>
             </div>

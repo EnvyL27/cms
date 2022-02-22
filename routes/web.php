@@ -15,20 +15,41 @@ use App\Http\Controllers\ArticleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//prac1
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+
+// Route::view('/about', 'about', ['name' => 'Ahmad Farrel Sirajudin Zaidan', 'nim' => '2041720238','class' => 'TI-2I']);
+
+
+// Route::get('/article/{id}', function ($id) {
+//     return 'This is article with ID: ' .$id; 
+// });
+
+// //prac2
+// Route::get('/index', [HomeController::class,'index']);
+// Route::get('/about', [AboutController::class,'about']);
+// Route::get('/articles/{id}', [ArticleController::class,'articles']);
+
+//prac3
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-
-Route::view('/about', 'about', ['name' => 'Ahmad Farrel Sirajudin Zaidan', 'nim' => '2041720238','class' => 'TI-2I']);
-
-
-Route::get('/article/{id}', function ($id) {
-    return 'This is article with ID: ' .$id; 
+Route::get('/about', function () {
+    return view('about');
 });
 
-//prac2
-Route::get('/index', [HomeController::class,'index']);
-Route::get('/about', [AboutController::class,'about']);
-Route::get('/articles/{id}', [ArticleController::class,'articles']);
+Route::get('/product', function () {
+    return view('category');
+});
+
+Route::get('/news', function () {
+    return view('news');
+});
+
+Route::get('/program', function () {
+    return view('program');
+});
