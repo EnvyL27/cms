@@ -34,22 +34,51 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
 //prac3
-Route::get('/', function () {
-    return view('home');
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+// Route::get('/about', function () {
+//     return view('about');
+// });
+
+// Route::get('/product', function () {
+//     return view('category');
+// });
+
+// Route::get('/news', function () {
+//     return view('news');
+// });
+
+// Route::get('/program', function () {
+//     return view('program');
+// });
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::view('/', 'index');
+
+Route::get('/about-us', function () {
+    return view('about-us');
 });
 
-Route::get('/about', function () {
-    return view('about');
+Route::get('/productpage', function () {
+    return view('productpage');
 });
 
-Route::get('/product', function () {
-    return view('category');
+Route::get('/howitworks', function () {
+    return view('howitworks');
 });
 
-Route::get('/news', function () {
-    return view('news');
+Route::get('/pricing', function () {
+    return view('pricing');
 });
 
-Route::get('/program', function () {
-    return view('program');
+Route::get('/cms', function () {
+    return view('cms');
+});
+
+Route::get('/cooming-soon', function () {
+    return view('cooming-soon');
 });
