@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('navbar')
 @section('content')
+@foreach ($posts as $post)
       <!-- Modal -->
       <div class="modal fade lug" id="myModal" role="dialog">
          <div class="modal-dialog">
@@ -45,7 +46,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="prod-page-title">
-                     <h2>All setup Sofa</h2>
+                     <h2>{{$post->productName}}</h2>
                      <p>By <span>Dex Morgan Mobilya</span></p>
                   </div>
                </div>
@@ -122,10 +123,7 @@
                      <div class="description-box">
                         <div class="dex-a">
                            <h4>Description</h4>
-                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                              lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                              when an unknown printer took a galley of type and scrambled it to make a 
-                              type specimen book..
+                           <p>{{$post->description}}</p>
                            </p>
                            <br>
                            <p>Small: H 25 cm / &Oslash; 12 cm</p>
@@ -323,4 +321,5 @@
          </div>
       </div>
       @section('footer')
+      @endforeach
 @endsection

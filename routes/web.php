@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,9 +64,11 @@ Route::get('/about-us', function () {
     return view('about-us');
 });
 
-Route::get('/productpage', function () {
-    return view('productpage');
-});
+// Route::get('/productpage', function () {
+//     return view('productpage');
+// });
+
+Route::get('/productpage', [PostController::class,'index']);
 
 Route::get('/howitworks', function () {
     return view('howitworks');
